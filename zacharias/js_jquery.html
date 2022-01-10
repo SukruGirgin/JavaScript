@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title>js_jquery.html</title>
+		<style>
+			p.invert {
+				background-color: black;
+				color: white;
+			}
+		</style>
+		
+		<script src="lorem_ipsum.js"></script>
+		
+		<script>
+			window.onload = go_1;
+			
+			function go_1() {
+				document.getElementById("abs_1").innerHTML = lorem;
+			}
+		</script>
+	</head>
+	
+	<body>
+		<h2>js vs jquery</h2>
+		<p id="abs_1"></p>
+		<p id="abs_2"></p>
+		<p id="abs_3"></p>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		
+		<script>
+			var vornamen = new Array("Marie","Frank","Otto","Anna");
+			
+			$(document).ready(function(){
+				$("#abs_2").html(lorem);
+				
+				$("#abs_2").click(function(){
+					$("#abs_2").html("Neuer Text");
+				});
+				
+				$(vornamen).each(function(){
+					$("#abs_3").append(this + "-");
+				});
+				
+				$("p").click(function(){
+					$(this).toggleClass("invert");
+				});
+			});
+		</script>
+		
+	</body>
+</html>

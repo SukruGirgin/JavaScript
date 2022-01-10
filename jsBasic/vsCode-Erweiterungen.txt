@@ -1,0 +1,15 @@
+Prettier
+Bei Prettier handelt es sich laut Entwickler um einen “voreingenommenen Code-Formatierer”. Die Visual Studio Code Extension parset den Code und formatiert ihn für mehr Ordnung. 
+
+ESLint
+Bei der Computerprogrammierung war Lint der Name, der ursprünglich einem bestimmten Programm gegeben wurde, das verdächtige und nicht tragbare Konstrukte (wahrscheinlich Fehler) im im Quellcode der C-Sprache kennzeichnet. Der Begriff wird jetzt allgemein auf Tools angewendet, die auf verdächtige Verwendung in Software hinweisen, die in einer beliebigen Computersprache geschrieben ist.
+Der Linter ESLint hilft bei der Fehlerfindung und Analyse von JavaScript Code. Nach einem statischen Check des Codes können gefundene Fehler z.T. bereits automatisch korrigiert werden
+
+Path Intellisense
+Die Erweiterung sorgt dafür, dass Dateinamen automatisch ausgefüllt werden
+
+Live Server
+Das Add-On Live Server ermöglicht das Hochziehen eines lokalen Entwicklungsservers. Die Extension bringt auch eine Reload-Funktion in Echtzeit mit, um statische und dynamische Seiten zu testen.
+    
+Bracket Pair Colorizer
+Dank des VS Code Plugin Bracket Pair Colorizer kannst Du zusammengehörige Klammern farblich kennzeichnen. Damit sind alle Elemente jederzeit im Blick und klar voneinander getrennt. So sieht man den Wald auch mit ganz vielen Bäumen.

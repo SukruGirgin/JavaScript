@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Basis Formular</title>
+  <link rel="stylesheet" href="styles/01_form.css">
+</head>
+
+<body>
+  <!-- form[Tab] -->
+  <form action="">
+    <!--In action das Ziel, die auswertende Datei, das auswertende Script-->
+    <fieldset>
+      <legend>Deine Daten</legend><!-- Beschriftung der Gruppe -->
+      <div>
+        <label for="firstName">Vorname</label>
+        <input type="text" name="fName" id="firstName">
+        <!-- name Zugriffspunkt für PHP, ASP / id=Zugriffspunkt für label und JS -->
+      </div>
+      <!-- div>label+input => ein Div gefolgt von Label und input -->
+      <div>
+        <label for="lastName">Nachname</label>
+        <input type="text" name="lName" id="lastName">
+      </div>
+    </fieldset>
+    <p class="txt-center"><button type="button" name="button">Absenden</button></p>
+  </form>
+
+</body>
+
+</html>

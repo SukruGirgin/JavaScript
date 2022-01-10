@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Datentypen</title>
+</head>
+<body>
+  <h2>Javascript Datentpyen</h2>
+  <ul>
+    <li>String => Zeichenketten</li>
+    <li>Number => Zahlenwerte mit Dezimalangaben</li>
+    <li>Boolean => Wahrheitswerte nur zwei Werte möglich true/false</li>
+    <li>Object</li>
+    <li></li>
+    <li></li>
+  </ul>
+  <p id="out"></p>
+  <script type="text/javascript">
+    'use strict';
+    let name = 'Ralph Wille';
+    const out = document.querySelector('#out');
+    out.style.fontSize = 1.2 + 'em';
+    out.style.color = '#00f';
+    out.innerHTML = 'Name hat den Datentyp: ' + typeof name;
+    let zahl1 = 10;
+    out.innerHTML += '<br>Zahl1 hat den Datentyp: ' + typeof(zahl1);
+    let res = name + zahl1;
+    out.innerHTML += '<br>Res hat den Datentyp: ' + typeof(res) + ' den Wert: ' + res;
+
+    //Implizite (stillschweigende) Umwandlung von Datentypen
+    let z1 = 8;
+    console.log(typeof(z1));
+    let z2 = '3';
+    console.log(typeof(z2));
+    let result = z1 + z2; //keine Addition sondern Verkettung
+    console.log(result + ' Datentyp = ' + typeof(result));
+    result = (z1 + z2); //Addition NUR wenn Klammern gesetzt
+    console.log(result + ' Datentyp = ' + typeof(result));
+    result = z1 - z2; //Subtraktion
+    console.log(result + ' Datentyp = ' + typeof(result));
+    result = z1 / z2; //Division
+    console.log(result + ' Datentyp = ' + typeof(result));
+    result = z1 * z2; //Multiplikation
+    console.log(result + ' Datentyp = ' + typeof(result));
+    result = z1 % z2; //Modulo ermittelt den Rest einer Division
+    console.log(result + ' Datentyp = ' + typeof(result));
+
+  </script>
+</body>
+</html>

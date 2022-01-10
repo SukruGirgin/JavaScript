@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Steuerzeichen</title>
+</head>
+<body>
+  <h2>Javascript Steuerzeichen</h2>
+  <ul>
+    <li>\n Zeilenumbruch</li>
+    <li>\r Wagenrücklauf</li>
+    <li>\t Tabulator</li>
+    <li>\f Seitenvorschub</li>
+    <li>\b Rückschritt</li>
+    <li>\" doppeltes Hochkommata</li>
+    <li>\' einfaches Hochkommata</li>
+    <!-- Hochkommata => Tüdelchen oder Anführungszeichen -->
+    <li>\\ Backslash</li>
+  </ul>
+  <p id="out">Hier erfolgt die Ausgabe</p>
+  <script type="text/javascript">
+    'use strict';
+    alert('Hallo\r\nschön\r\ndass Du\tja Du\nda bist.');
+    console.log('Hallo\r\nschön\r\ndass Du\tja Du\nda bist.');
+    document.querySelector('#out').innerHTML = 'Hallo\r\nschön\r\ndass Du\tja Du\nda bist.';
+    document.querySelector('#out').style.fontSize = '1.4em';
+    // CSS font-size wird zu fontSize
+    document.querySelector('#out').style.color = '#f00';
+  </script>
+</body>
+</html>

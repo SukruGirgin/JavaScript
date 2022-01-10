@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	<meta charset="utf-8" />
+	<title>Assoziative-Arrays</title>
+ </head>
+ <body>
+ <script>
+	 var Mitarbeiter = new Array(); 
+	 
+	 Mitarbeiter[0] = new Object(); 
+	 Mitarbeiter[0]["Name"] = "Müller"; 
+	 Mitarbeiter[0]["Vorname"] = "Hans";
+	 Mitarbeiter[0]["Wohnort"] = 12345;
+	 
+	 Mitarbeiter[1] = new Object();
+	 Mitarbeiter[1]["Name"] = "Schulze";
+	 Mitarbeiter[1]["Vorname"] = "Frauke";
+	 Mitarbeiter[1]["Wohnort"] = "Berlin";
+	 Mitarbeiter[1]["plz"] = 12345;
+	 Mitarbeiter[1]["member"] = true;
+	 
+	 for(var i=0; i < Mitarbeiter.length; i++) {
+		 for(key in Mitarbeiter[i]) {
+			document.write(key +' - '+Mitarbeiter[i][key] + '<br />');
+		 }
+	 }
+	 
+
+	 
+	 
+	 
+	 
+	 
+	 /*
+	 for (var i = 0; i < Mitarbeiter.length; i++) {
+	 document.write("<dl><dt>Mitarbeiter " + (i + 1) + "<\/dt>");
+		for (var Eigenschaft in Mitarbeiter[i]) {
+			document.write("<dd>" + Eigenschaft + ": " + Mitarbeiter[i][Eigenschaft] + "<\/dd>");
+		}
+		document.write("<\/dl>"); 
+	 }
+	 */
+ </script>
+ </body>
+</html>

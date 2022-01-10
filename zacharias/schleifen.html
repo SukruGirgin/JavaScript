@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	<meta charset="utf-8" />
+	<title>schleifen.html</title>
+	
+	</head>
+	
+	<body>
+		<h2>Schleifen in Javascript</h2>
+		<h3>"for" Schleife</h3>
+		<script>
+			// "++" - Inkrement 1 addieren
+			// "--" - Dekrement 1 subtrahieren
+			
+			for(var i=25; i>15; i--) {
+				document.write(i + " - ");
+			}
+			document.write("<hr />");
+			
+			var orte = new Array("Hamburg","Berlin","Köln");
+			
+			for(var i=0; i < orte.length; i++) {
+				document.write(orte[i] + " - ");
+			}
+		</script>
+		
+		
+		<h3>"for in" & "for of" Schleife</h3>
+		<script>
+			var ausgabe = "";
+			for(property in document) {
+				ausgabe += "document." + property + " - ";
+			}
+			document.write(ausgabe);
+			document.write("<hr />");
+			
+			var zahlen = [2, 3, 5, 7, 11, 13, 17, 19];
+			zahlen.name = "primzahlen";
+			
+			// bei "for-of" wird der Wert augegeben
+			// bei "for-in" wird der Index augegeben
+			for(var i of zahlen) {
+				document.write(i + " - ");
+			}
+			
+			/* mit jQuery
+			
+			$(elemente).each(function(){
+				$(this).name();
+			});
+			*/
+		</script>
+		
+		<h3>"while" Schleife</h3>
+		<script>
+			var eingabe = "blabla";
+			
+			while(eingabe != "yxc") {
+				eingabe = prompt("Hier Eingabe");
+				document.write(eingabe + " - ");
+			}
+		</script>
+		
+		<h3>"do-while" Schleife</h3>
+		
+		<script>
+		var versuche = 0;
+		do{
+			var pass = prompt("hier Passwort:");
+			
+			versuche++;
+			if(versuche > 3) {
+				alert(versuche + " Versuche - account gesperrt");
+				break;
+			}
+			if(pass=="123") {
+				document.write("Passwort richtig im: "+versuche+"  Versuch");
+			}
+		} while(pass != "123");
+		</script>
+		
+		<h3>"for" Schleife mit "continue"</h3>
+		<script>
+			var zahl = 1;
+			for(var i=1; i<=20; i++) {
+				if(i==3) {
+					continue;
+				}
+				zahl++;
+				document.write(i + "-" + zahl + " | ");
+			}
+		</script>
+	</body>
+</html>

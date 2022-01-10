@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Rechner</title>
+  <link rel="stylesheet" href="styles/02_form.css">
+  <!-- 
+    Variante A: mit input type="number" Z20,23,26 und Z 29
+    <script src="scripte/11_miniRechner.js"></script> -->
+</head>
+
+<body>
+  <form>
+    <h2>JS: Minirechner</h2>
+    <div>
+      <label for="no1">Zahl 1</label>
+      <input type="text" id="no1" autofocus></div>
+    <div>
+      <label for="no2">Zahl 2</label>
+      <input type="text" id="no2"></div>
+    <div>
+      <label for="res">Ergebnis</label>
+      <input type="text" id="res" disabled></div>
+    <div>
+      <label for="rest">Rest</label>
+      <input type="text" id="rest" disabled></div>
+    <p><button type="button">Rechne</button></p>
+  </form>
+  <p id="out"></p>
+  <script src="scripte/11_miniRechnerB.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+/* Nur wenn h1 innerhalb eines div */
+div h1 {
+  color: red;
+}
+
+/* Nur wenn img Kind von p */
+p > img {
+  border: 2px solid blue;
+}
+
+/* nur den direkten Nachbarn des Elements */
+li + li {
+  border: 2px dotted green;
+  padding: 0.5em 1em;
+}
+/* Hier deutlicher, da nur erstes p hinter h3 */
+h3 + p {
+  background-color: rgba(255,0,0,0.5);
+}
+
+/* Alle indirekten Nachbarn */
+h1 ~ h2 {
+  color: blue;
+}

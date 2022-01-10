@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rechnen</title>
+</head>
+<body>
+  <h2>Rechenen in JS</h2>
+  <p id="out"></p>
+
+  <script>
+    let zahl1 = '2'; //Type = String (keine REINE Zahl)
+    let zahl2 = 3;   //Type = Number (REINE Zahl)
+    let zahl3 = 5;
+    let result;
+    let out = document.querySelector('#out');
+
+    //Addition
+    result = zahl1 + zahl2;
+    // keine Addition, da +-Zeichen hier als Verkettungsoperator angesehn wird
+    out.innerHTML = result;
+    //mit Klammern?
+    result = (zahl1 + zahl2);
+    out.innerHTML += '<br>' + result;
+    //nur wenn vorher Umwandlung String in Number
+    result = Number(zahl1) + Number(zahl2);
+    out.innerHTML += '<br>' + result;
+    //Addition zwei Zahlenwerte (Number)
+    result = zahl2 + zahl3;
+    out.innerHTML += '<br>' + result;
+    
+    console.log(typeof(zahl1));
+    //Subtraktion
+    result = zahl1 - zahl2;
+    out.innerHTML += '<br>' + result;
+
+    console.log(typeof(zahl1));
+    //Multiplikation
+    result = zahl1 * zahl2;
+    out.innerHTML += '<br>' + result;
+
+    console.log(typeof(zahl1));
+    //Division
+    result = zahl1 / zahl2;
+    out.innerHTML += '<br>' + result;
+  </script>
+</body>
+</html>

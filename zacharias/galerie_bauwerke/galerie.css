@@ -1,0 +1,52 @@
+body {
+	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #fff;
+	margin: 0;
+	background-color: #000;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+#galerie {
+	margin: 0;
+	padding: 0;
+	width: 655px;
+	margin: 10px auto;
+	-webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.2)));
+}
+
+#galerie > img {
+	margin: 0 4px 4px 4px;
+	display: block;
+	cursor: help;
+}
+
+#galerie > img:first-child {
+	float: left;
+}
+
+#info_box {
+	clear: both;
+    width: 630px;
+    margin: 15px 0 0 4px;
+    padding: 5px;
+    border: 2px solid #fff;
+}
+
+#info_box h3 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 2px;
+}
+
+#info_box h3 img {
+	margin-right: 5px;
+	vertical-align: -1px;
+}

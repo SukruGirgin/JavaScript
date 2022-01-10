@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title>Arrays</title>
+		<script src="lorem_ipsum.js"></script>
+	</head>
+	
+	<body>
+		<!--
+		 isArray(), includes(), indexOf(), join(), pop(), push(), reverse(), sort()
+		 length 
+		-->
+		<h2>Array Methoden und Eigenschaften</h2>
+		<h3>isArray()</h3>
+		<script>
+			var vornamen = new Array("Marie","Frank","Otto","Anna"); // literal
+			//let vornamen = ["Marie","Frank","Otto"]; // factory pattern
+			
+			if(Array.isArray(vornamen)) {
+				document.write("Die variable \"vornamen\" ist ein Array");
+			}
+			// mit dem backslash können Zeichen maskiert werden, diese werden somit nicht von JS interpoliert (beachtet)
+			document.write("<hr />");
+			console.log(typeof vornamen);
+		</script>
+		
+		<h3>sort(), join(), push()</h3>
+		<script>
+		/*
+		var vNamen = vornamen;
+		vNamen.sort();
+		var vornamenStr = vNamen.join("-");
+		*/
+		
+		vornamen.push("Walter");
+		
+		// var vNamen = [];
+		var vNamen = new Array();
+		
+		for(var wert of vornamen) {
+			vNamen.push(wert);
+		}
+		
+		var anzahlElem = vNamen.push("Beate");
+		console.log(anzahlElem);
+		
+		var vornamenStr = vNamen.sort().join("-");
+		
+		document.write(vornamenStr);
+		document.write("<hr />");
+		</script>
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</body>
+</html>

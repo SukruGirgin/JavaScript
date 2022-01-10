@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	<meta charset="utf-8" />
+	<title>tabelle_mit_for.html</title>
+	<style>
+		table {
+			border-collapse: collapse;
+		}
+		td {
+			border: 1px solid gray;
+			width: 75px;
+			height: 75px;
+		}
+		tr:nth-of-type(odd) td:nth-of-type(even) {
+			background-color: black;
+		}
+		tr:nth-of-type(even) td:nth-of-type(odd) {
+			background-color: gray;
+		}
+	</style>
+	</head>
+	
+	<body>
+		<h2>Schachbrett</h2>
+		<table id="tab"></table>
+		
+		<script>
+			var ausgabe = "";
+			
+			for(var i=1; i<=8; i++) {
+				ausgabe += "<tr>";
+				
+				for(var ii=1; ii<=8; ii++) {
+					ausgabe += "<td></td>";
+				}
+				
+				ausgabe += "</tr>";
+			}
+			document.getElementById("tab").innerHTML = ausgabe;
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title>morse_code</title>
+		<style>
+			div, textarea {
+				border: 1px solid gray;
+				width: 45%;
+				height: 250px;
+			}
+			#eingabe {
+				float: left;
+				margin-left: 20px; 
+			}
+			div#ausgabe {
+				float: right;
+				margin-right: 20px;
+			}
+			
+			span {
+				clear: both;
+			}
+		</style>
+		
+		<script src="script/morse_array.js"></script>
+	</head>
+	
+	<body>
+		<h2>Morse-Code translator</h2>
+		<textarea id="eingabe"></textarea>
+		<div id="ausgabe"></div>
+		
+		<span></span>
+		
+		<script src=
+		"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		
+		<script src="script/morse_code.js"></script>
+		
+	</body>
+</html>

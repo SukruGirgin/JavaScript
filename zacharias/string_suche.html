@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title>String-Suche</title>
+		
+		</head>
+		<script src="lorem_ipsum.js"></script>
+	<body>
+		<h2>String-Suche</h2>
+		<form>
+			<label for="eingabe">Suchstring-Eingabe</label>
+			<input type="text" value="" id="eingabe" required="required"   placeholder="hier Deine Suche" autocomplete="off" autofocus="autofocus" pattern="\w" onkeyup="suche(this.value);" />
+			
+		</form>
+		<div id="ausgabe"></div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		
+		<script>
+			function suche(eingabe) {
+				if(eingabe.length > 0) {
+					var anzahl = 0;
+					
+					if(eingabe.length == 1) {
+						for(var i=0; i < lorem.length; i++) {
+							console.log(lorem[i]);
+							
+							if(lorem[i] == eingabe) {
+								anzahl++;
+							}
+						}
+					} else {
+						var wortArr = lorem.split(" ");
+						for(var wort of wortArr) {
+							if(wort.includes(eingabe)) {
+								anzahl++;
+							}
+						}
+					}
+					document.getElementById("ausgabe").innerHTML = "Die Suche nach: "+eingabe+" brachte: "+anzahl+" Ergebnisse";
+				}
+			}
+		</script>
+	</body>
+</html>

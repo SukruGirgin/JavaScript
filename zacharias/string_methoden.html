@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title>string methoden</title>
+		<script src="lorem_ipsum.js"></script>
+		<!--
+		Bezeichner mit Parameter-Klammern nennt man Funktionen.
+		Funktionen, die nur mit einem Objekt ausgeführt werden, nennt
+		man Methoden.
+		Objekte können außerdem auch noch Eigenschaften und Unterobjekte enthalten.
+		-->
+	</head>
+	
+	<body>
+		<h2>Objekt String und Methoden/Eigenschaften</h2>
+		<h3>Anzahl der Zeichen im String (length und replace() )</h3>
+		<div id="div_1">Lorem Ipsum enthält ... Zeichen</div>
+		<script>
+			/*
+			length - Eigenschaft und replace() - Methode
+			*/
+			var anzahl_zeichen = lorem.length;
+			var div_inhalt = document.getElementById("div_1").innerHTML;
+			var txt_neu = div_inhalt.replace("...", anzahl_zeichen);
+			
+			document.getElementById("div_1").innerHTML = txt_neu;
+		</script>
+		
+		<h3>Anzahl der Wörter im Text - split()</h3>
+		<div id="div_2">Lorem Ipsum enthält ... Wörter</div>
+		<script>
+			var container = document.getElementById("div_2");
+			var textNeu_1 = lorem.replace(".", "");
+			var textNeu_2 = textNeu_1.replace(",", "");
+			
+			var wortArr = textNeu_2.split(" ");
+			var anzahlWoerter = wortArr.length;
+			container.innerHTML = container.innerHTML.replace("...", anzahlWoerter);
+		</script>
+		
+		<h3>Anzahl des Buchstaben "e" im Text - indexOf() / includes()</h3>
+		<div id="div_3">Lorem Ipsum enthält ... "E´s"</div>
+		<script>
+			var container = document.getElementById("div_3");
+			var anzahl = 0;
+			var anzahl_1 = 0;
+			
+			for(var wort of wortArr) {
+				if(wort.includes("e")) {
+					anzahl_1++;
+				}
+			}
+			console.log(anzahl_1); // 52
+			/*
+			 if(wortArr[i].indexOf("e"))
+			*/
+			for(var i=0; i < lorem.length; i++) {
+				if(lorem[i] == "e") {
+					anzahl++;
+				}
+			}
+			container.innerHTML = container.innerHTML.replace("...", anzahl);
+			// 56
+		</script>
+		
+		<h3>substr() / substring()</h3>
+		<script>
+			var sub_1 = lorem.substr(5,10);
+			document.write("Ab pos. 5, 10 Zeichen: " + sub_1);
+			document.write("<hr />");
+			
+			var sub_2 = lorem.substr(52);
+			document.write("Ab pos. 52, Rest: " + sub_2);
+			document.write("<hr />");
+			
+			var sub_3 = lorem.substr(-7);
+			document.write("Ab pos. 7 vom Ende, Rest: " + sub_3);
+			document.write("<hr />");
+			
+			var sub_4 = lorem.substring(5,10);
+			document.write("Ab pos. 5, bis zu pos. 10: " + sub_4);
+			document.write("<hr />");
+			
+			var datum = "2021/08/23";
+			var eu_datum = "";
+			var datumArr = datum.split("/");
+			eu_datum = datumArr[2] + "." + datumArr[1] + "." + datumArr[0];
+			document.write(eu_datum);
+			document.write("<hr />");
+			
+			/*
+			[13:04] Oleksiy Pasmarnov
+			const euDate = initialDate.split('/').reverse().join('.');
+			*/
+
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</body>
+</html>

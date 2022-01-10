@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Variablen</title>
+</head>
+<body>
+  <h2>Javascript Variablen</h2>
+  <p id="out"></p>
+  
+  <p class="output"></p>
+
+  <h3></h3>
+
+  <p class="output"></p>
+  <script type="text/javascript">
+    // Deklaration
+    var a;
+    let b;
+    //Initialisierung
+    a = 10; //Zahlenwerte (Number) direkt ohne Anführungszeichen
+    b = "Text";
+    //übliche Vorgehensweise => Deklaration und Initialisierung in eins
+    const c = "Konstanter Wert"; //Textwerte (String) in einfache oder doppelte Anführungszeichen
+    var d = "Ein Text"; let e = 40.56; //Dezimalzahlen mit PUNKT statt Komma
+    document.getElementById('out').innerHTML = a;
+    //document.querySelector('#out'); ==> querySelector() greift IMMER erstes Element
+    document.getElementsByClassName('output')[0].innerHTML = b;
+    //document.querySelectorAll('.output')[0]; ==> querySelectorAll() greift alle Elemente
+    document.getElementsByTagName('h3')[0].innerHTML = c;
+    //document.querySelector('h3');
+    document.getElementsByClassName('output')[1].innerHTML = 'Var d: ' + d + ', ' + e;
+    // Hier +-Zeichen als Verkettungsoperator
+    //document.querySelectorAll('.output')[1];
+    document.getElementsByClassName('output')[0].innerHTML += ', ' + (a + e);
+    //let d = 'Neuer Wert'; Syntaxfehler, da Variable d schon in Zeile 27 deklariert
+    //var d = 'Neuer Wert'; möglich aber verwirrend, da die Angabe des Schlüsselwortes var nur bei erster Deklaration erfolgt
+
+    /* Regeln für Variablen-, Funktions-, Objektbezeichner:
+     - case sensitive => var A ist eine andere als var a;
+     - Dezimalpunkt statt Komma
+     - Bezeichner dürfen ausschließlich aus: Buchstaben, arabischen Ziffern (0-9), dem Dollarzeichen $ sowie dem Unterstrich _ bestehen.
+     - Alle Zeichen dürfen an beliebiger Stelle vorkommen, außer den Ziffern, die nicht an erster Stelle vorkommen dürfen
+     - Alle anderen Zeichen (Leer-, oder Sonderzeichen (", §, /, ...)) sind NICHT erlaubt
+     - reservierte Wörter dürfen NICHT als Bezeichner verwendet werden
+    */
+</script>
+</body>
+</html>

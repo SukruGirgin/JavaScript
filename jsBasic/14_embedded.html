@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Embedded</title>
+  <script>
+    function warnung() {
+      alert('Ein Warnfenster\r\nmit zwei Zeilen');
+    }
+  </script>
+</head>
+<body>
+  <!-- Funktioniert, ist aber NICHT empfehlenswert, da alte Syntax und Vermischung von Struktur (HTML) und Verhalten (Javascript) -->
+  <p>Wenn Sie <a href="javascript: warnung();">hier klicken</a> wird ein Warnfenster aufgerufen.</p>
+</body>
+</html>

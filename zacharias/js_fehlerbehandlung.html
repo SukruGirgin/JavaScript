@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	<meta charset="utf-8" />
+	<title>js_fehlerbehandlung.html</title>
+		<style>
+			
+		</style>
+	</head>
+	
+	<body>
+		<h2>js_fehlerbehandlung</h2>
+		<h3>mit onerror-event</h3>
+		<p id="ausgabe">Keine Fehlermeldung vorhanden</p>
+		
+		<h3>mit try und catch</h3>
+		<p id="output">Keine Fehlermeldung vorhanden</p>
+		
+		<p><strong>InternalError</strong>  Erstellt eine Instanz, die einen Fehler repräsentiert, der auftritt, wenn ein interner Fehler in JavaScript auftaucht (z. B. zu viel Rekursion).</p>
+		
+		<p><strong>EvalError</strong>Erstellt eine Instanz, die einen Fehler repräsentiert, der bei der globalen eval() Funktion auftritt.</p>
+		
+		<p><strong>ReferenceError</strong>Erstellt eine Instanz, die einen Fehler repräsentiert, der auftritt, wenn eine nicht valide Referenz referenziert werden soll.</p>
+		
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			window.onerror = fehler;
+			
+			let ausgabe = "";
+			
+			function fehler(msg, datei, zeile) {
+				ausgabe = "Fehlermeldung: " + msg + " inder Datei: " +datei+ " in der Zeile: " +zeile;
+				
+				document.getElementById("ausgabe").innerHTML = ausgabe;
+				return true;
+			}
+			
+			blabla();
+			
+			
+			try {
+				input = prompt("hier Eingabe");
+				
+				if(!input || input == "") {
+					alert("Eingabe war: " + input);
+				}
+				
+			} catch(e) {
+				if(e instanceof InternalError) {
+					// e.name und e.message
+				} else if(e instanceof EvalError) {
+					
+				}
+				
+				document.getElementById("ouput").innerHTML = e.message;
+			}
+		</script>
+		
+	</body>
+</html>

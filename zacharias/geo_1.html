@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	<meta charset="utf-8" />
+	<title>geo_1.html</title>
+	
+	</head>
+	
+	<body>
+		<h2>geolocation</h2>
+		<div id="message"></div>
+		
+		<script>
+			// navigator.geolocation
+			// prüfen ob geolocation vorhanden
+			function checkGeo() {
+				return "geolocation" in navigator;
+			}
+			
+			// Position abfragen und callback-funktionen ausführen
+			function getPosition() {
+				navigator.geolocation.getCurrentPosition(zeigePos, zeigeErr,options);
+			}
+			
+			//  wenn geolocation vorhanden - options definieren und Funktion "getPosition" ausführen
+			if(checkGeo()) {
+				var options = {enableHighAccuracy: true, timeout:5000, maximumAge: 100};
+				getPosition();
+			}
+			
+			// callback-funktion ausführen und Parameter "pos" auswerten
+			function zeigePos(pos) {
+			var msg = "Die Koordinaten lauten: "+pos.coords.latitude +" - "+ pos.coords.longitude;
+			
+			console.log(msg);
+				zeigeMsg(msg);
+			}
+			
+			// Meldungen im DIV- anzeigen
+			function zeigeMsg(msg) {
+				document.getElementById("message").innerHTML = msg;
+			}
+			
+			// PERMISSION_DENIED, POSITION_UNAVAILABLE, TIMEOUT, UNKNOWN_ERROR
+			
+			function zeigeErr(err) {
+			 switch(err.code) {
+				case err.PERMISSION_DENIED:
+				zeigeMsg("Geolocation Zugriff nicht verfügbar.");
+				break;
+				case err.POSITION_UNAVAILABLE:
+				zeigeMsg("Geolocation Daten nicht verfügbar.");
+				break;
+				case err.TIMEOUT:
+				zeigeMsg("Geolocation dauert mir zu lange.");
+				break;
+			 }
+			}
+		</script>
+	</body>
+</html>

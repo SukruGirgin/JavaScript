@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Arrays</title>
+</head>
+<body>
+  <h2>Javascript Arrays</h2>
+  <p>Arrays auch Datenfelder genannt. Wir können uns diese vorstellen, wie eine Art Tabelle aus 2 Zeilen. In der ersten Zeile werden die Inhalte (Werte) erfasst. In der zweiten Zeile wird automatisch ein Index (Zählwert) abgelegt.</p>
+  <p>Alternativ können wir uns Arrays wie eine Stapel von Notizen vorstellen. Auf jedem Blatt steht ein Wert. Das oberste Blatt hat die Zählziffer 0, jedes weitere Blatt erhält einer Zählziffer welche um jeweils 1 erhöht wird.</p>
+  <p id="out"></p>
+  <p id="pruef"></p>
+  <script>
+    'use strict';
+    //Erzeuge eine Ausgabe zur Bestätigung, dass bis hierhin alle Anweisungen funktionieren
+    //bzw. die gewünschten Werte erzeugt wurden
+    console.log('JS Arrays');
+    //1 Array, auch genannt Feldvariable mit Konstruktor
+    let username = new Array('Apfel', 'Birne', 'Clementine', 'Datteln');
+    //1 Array deklarativ, auch genannt Array-Literal
+    let password = [];
+    password[0] = 'A';
+    password[1] = 'B';
+    password[2] = 'C';
+    password[3] = 'D';
+    // alternative Wertzuweisung: password['A', 'B', 'C', 'D'];
+
+    // Für die Ausgabe gibt es verschiedene Möglichkeiten
+    // Möglichkeit 1 => händisch
+    let out = document.querySelector('#out');
+    out.innerHTML = 'User: ' + username[0] + ', Passwort: ' + password[0]  + '<br>';
+
+    // Ausgabe aller Daten der Arrays via Schleife
+    // Schleife 1 => for-Schleife
+    // for(initialwert; Bedingung; neuer Wert)
+    // Initialwert => Variable mit Wertzuweisung (let i = 0)
+    // Bedingung => Vergleich des Initialwertses mit Vorgabewert (hier Anzahl der im Array vorhandenen Werte) 
+    // neuer Wert Initialwert + oder - eines konstanten Wertes
+    out.innerHTML += '<br>Ausgabe via Schleife 1<br>';
+    for(let i = 0; i < username.length; i++) { 
+      //i++ identisch zu  i = i + 1 => sogenannte inkrementieren
+      //i-- identisch zu i = i - 1 => dekrementieren
+      out.innerHTML += 'User: ' + username[i] + ', Passwort: ' + password[i] + '<br>';
+    }
+
+    out.innerHTML += '<br>Ausgabe via Schleife 2<br>';
+    //Schleife 2 => for-in Schleife
+    //Für jeden Zähler im Array liefere den Wert 
+    for(let j in username) {
+      out.innerHTML += 'User: ' + username[j] + ', Passwort: ' + password[j] + '<br>';
+    }
+  </script>
+</body>
+</html>

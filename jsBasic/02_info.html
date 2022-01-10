@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Infomaterial</title>
+  <link rel="stylesheet" href="styles/02_form.css">
+  <script src="scripte/jquery-3.6.0.min.js"></script>
+  <!-- <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script> -->
+  <script src="scripte/jqFormCheck.js"></script>
+</head>
+<body>
+  <p class="txt-center" id="out"></p>
+  <form action="02_danke.html" id="info">
+    <h2>Infomaterial</h2>
+    <fieldset>
+      <legend>Persönliches</legend>
+      <div>
+        <label for="firstname">Vorname</label>
+        <input type="text" id="firstname" placeholder="Dein Vorname" autofocus>
+      </div>
+      <div>
+        <label for="lastname">Nachname</label>
+        <input type="text" id="lastname" placeholder="Dein Nachname">
+      </div>
+      <div>
+        <label for="email">Ihre E-Mail</label>
+        <input type="email" id="email" placeholder="E-Mail@example.com">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Deine Wahl</legend>
+      <div>
+        <label for="rate">Zahlungsart</label>
+        <select name="rate" id="rate">
+          <option value="L">Leasing</option><!-- value = Rückgabewert -->
+          <option value="R">Ratenkauf</option>
+          <option value="B">Barkauf</option>
+        </select>
+      </div>
+      <div>
+        <!-- label+(input[type="checkbox"]+label)*3 -->
+        <label class="info">Informationen</label>
+        <div class="boxen">
+          <span><input type="checkbox" name="info" id="benzin">
+          <label for="benzin">Benzin</label></span>
+
+          <span><input type="checkbox" name="info" id="diesel">
+          <label for="diesel">Diesel</label></span>
+
+          <span><input type="checkbox" name="info" id="elektro">
+          <label for="elektro">Elektro</label></span>
+        </div>
+      </div>
+
+      <div>
+        <label>Kommunikation</label>
+        <div class="boxen">
+          <span>
+            <input type="radio" id="post" name="comm" value="p">
+            <label for="post">Post</label></span>
+          <span>
+            <input type="radio" id="tel" name="comm" value="t">
+            <label for="tel">Telefon</label></span>
+          <span>
+            <input type="radio" id="mail" name="comm" value="m" checked>
+            <label for="mail">E-Mail</label></span>
+        </div>
+      </div>
+
+    </fieldset>
+    <p class="txt-center"><button>Absenden</button></p>
+  </form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Arrays</title>
+</head>
+<body>
+  <h2>Javascript Arrays</h2>
+  <p>Arrays auch Datenfelder genannt. Wir können uns diese vorstellen, wie eine Art Tabelle aus 2 Zeilen. In der ersten Zeile werden die Inhalte (Werte) erfasst. In der zweiten Zeile wird automatisch ein Index (Zählwert) abgelegt.</p>
+  <p>Alternativ können wir uns Arrays wie eine Stapel von Notizen vorstellen. Auf jedem Blatt steht ein Wert. Das oberste Blatt hat die Zählziffer 0, jedes weitere Blatt erhält einer Zählziffer welche um jeweils 1 erhöht wird.</p>
+  <p id="out"></p>
+  <p id="pruef"></p>
+  <script>
+    'use strict';
+    //Erzeuge eine Ausgabe zur Bestätigung, dass bis hierhin alle Anweisungen funktionieren
+    //bzw. die gewünschten Werte erzeugt wurden
+    console.log('JS Arrays');
+    //1 Array, auch genannt Feldvariable mit Konstruktor
+    let username = new Array('Apfel', 'Birne', 'Clementine', 'Datteln');
+    //1 Array deklarativ, auch genannt Array-Literal
+    let password = [];
+    password[0] = 'A';
+    password[1] = 'B';
+    password[2] = 'C';
+    password[3] = 'D';
+    // alternative Wertzuweisung: password['A', 'B', 'C', 'D'];
+
+    let uname = prompt('Bitte Usernamen eingeben', '');
+    let pword = prompt('Bitte Passwort eingeben', '');
+
+    // Ab hier Ausgabe im zweiten Absatz
+    let pruef = document.querySelector('#pruef');
+    //Möglichkeit 1 alle möglichen Kombinationen prüfen
+    if((uname === username[0] && pword === password[0]) ||
+       (uname === username[1] && pword === password[1]) ||
+       (uname === username[2] && pword === password[2]) ||
+       (uname === username[3] && pword === password[3])) {
+        pruef.innerHTML =  'Sei gegrüßt ' + uname + '<br>';
+    } else {
+      pruef.style.color = 'red';
+      pruef.innerHTML =  'Sorry die eingegebenen Daten sind ungültig<br>'; 
+    }
+    
+    //Möglichkeit 2 unter Verwendung der for-in Schleife
+    for(let x in username) {
+      if(uname === username[x] && pword === password[x]) {
+        pruef.removeAttribute('style');
+        pruef.innerHTML =  'Sei gegrüßt ' + username[x] + '<br>';
+      } else {
+        pruef.style.color = 'red';
+        pruef.innerHTML =  'Sorry die eingegebenen Daten sind ungültig<br>';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Fenster</title>
+</head>
+<body>
+  <h2>Javscript Fenster</h2>
+  <p>Verschiedene modale Meldungsfenster</p>
+  <script type="text/javascript">
+    //Globale Methode, dass bedeutet, das jederzeit diese Methode genutzt werden kann
+    //gehören zum window-Objekt
+    //1. Einfaches Meldungsfenster, welches den Fokus einnimmt und die Verarbeitung stoppt
+    window.alert('Hello World :-)');
+    //window als Identifizierer kann entfallen ==> alert('Hello World :-)');
+    //2. Erweiterte Meldungsfenster / Entscheidungs-, Wahlfenster
+    var anfrage = confirm('Du willst rein?');
+    //Da Wahlmöglichkeit hier prüfen
+    if(anfrage == 1) { //einfache Gleichheit da hier ungleicher Datentyp
+    // if(anfrage === true) { //exakte Gleichheit da hier Datentyp und Wert übereinstimmen
+      document.querySelector('p').innerHTML = 'Hol Dir ein Passwort.';
+    } else {
+      document.querySelector('p').innerHTML = 'Na gut dann nicht.';
+    }
+    //3. Eingabeaufforderung prompt(['nachricht'], ['standardwert']) ==> zwei optionale Parameter
+    //Rückgabewert ist IMMER ein String (Zeichenkette)
+    var name = prompt('Wie heißt Du?');
+    if(name === '') {
+      document.querySelector('p').innerHTML = 'Bitte gib Deinen Namen ein!';
+    } else if(name === 'null') {
+      alert('Vorgang abgebrochen.');
+    } else {
+      document.querySelector('p').innerHTML = 'Hallo ' + name + ' wie geht\'s?'; 
+      // Ausgabe von Sondezeichen (Steuerzeichen) hier ' durch Entwertung (vorangestelltes \)
+    }
+  </script>
+  <p>HTML abgearbeitet.</p>
+</body>
+</html>

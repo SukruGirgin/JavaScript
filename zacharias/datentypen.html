@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	<meta charset="utf-8" />
+	<title>Datentypen</title>
+	<script>
+		
+	</script>
+	</head>
+	
+	<body>
+		<h2 class="txt-center">String</h2>
+		<script>
+			var zahl_1; // Deklaration
+			zahl_1 = 17; // Initialisierung
+			
+			var zahl_2 = "17"; // Initialisierung
+			
+			if(zahl_1 == zahl_2) {
+				document.write("Die variablen sind gleich");
+			}
+			
+			/*
+			if(zahl_1 === zahl_2) {
+				document.write(" - aber nicht identisch.");
+			}
+			*/
+			
+			var lorem_1 = "Lorem ipsum";
+			document.write("Die variable lorem_1 ist: " + lorem_1.length + " Zeichen lang<br />");
+		</script>
+		
+		<h2 class="txt-center">Array</h2>
+		<script>
+			var namen = new Array();
+			namen[0] = "Meyer";
+			namen[1] = "Müller";
+			
+			var vornamen = new Array("Marie","Frank","Otto");
+			
+			if(namen.indexOf("Meyer") >= 0 && vornamen.indexOf("Frank") >= 0) {
+				alert("Namen sind vorhanden");
+			}
+			
+			
+			document.write(vornamen[2] + " " + namen[1]);
+			document.write("<hr />");
+			
+			var digits = "45,78,93,56";
+			var zahlen = digits.split(",");
+			document.write(zahlen[2]);
+			
+			//$(".txt-center").html();
+			alert(document.querySelector('.txt-center').innerHTML);
+			
+		</script>
+		
+	</body>
+</html>
